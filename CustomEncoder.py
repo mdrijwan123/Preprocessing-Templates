@@ -4,12 +4,11 @@ import numpy as np
 class DataFrameEncoder(TransformerMixin):
 
     def __init__(self):
-        """Impute missing values.
+        """Finding the dummy values of the columns in DataFrame.
 
-        Columns of dtype object are imputed with the most frequent value 
-        in column.
+        Columns of dtype object are taken in array.
 
-        Columns of other types are imputed with mean of column.
+        The columns collectively taken and finding it's dummies, dropped first column and concated.
 
         """
     def fit(self, X, y=None):
